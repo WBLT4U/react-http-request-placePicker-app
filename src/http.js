@@ -1,5 +1,5 @@
 export async function fetchAvailablePlaces() {
-  const response = await fetch("https://react-http-request-place-picker-app.vercel.app/api/places");
+  const response = await fetch("/api/places");
   const resData = await response.json();
 
   if (!response.ok) {
@@ -10,7 +10,7 @@ export async function fetchAvailablePlaces() {
 }
 
 export async function fetchUserPlaces() {
-  const response = await fetch("https://react-http-request-place-picker-app.vercel.app/api/places");
+  const response = await fetch("/api/places");
   const resData = await response.json();
 
   if (!response.ok) {
@@ -21,7 +21,7 @@ export async function fetchUserPlaces() {
 }
 
 export async function updateUserPlaces(places) {
-  const response = await fetch("https://react-http-request-place-picker-app.vercel.app/api/places", {
+  const response = await fetch("/api/places", {
     method: 'PUT',
     body: JSON.stringify({ places }),
     headers: {
