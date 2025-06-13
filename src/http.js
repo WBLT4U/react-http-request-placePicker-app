@@ -10,7 +10,7 @@ export async function fetchAvailablePlaces() {
 }
 
 export async function fetchUserPlaces() {
-  const response = await fetch('https://react-http-request-placepickers-app.onrender.com/places');
+  const response = await fetch('https://react-http-request-placepickers-app.onrender.com/user-places');
   const resData = await response.json();
 
   if (!response.ok) {
@@ -21,7 +21,7 @@ export async function fetchUserPlaces() {
 }
 
 export async function updateUserPlaces(places) {
-  const response = await fetch('https://react-http-request-placepickers-app.onrender.com/places', {
+  const response = await fetch('https://react-http-request-placepickers-app.onrender.com/user-places', {
     method: 'PUT',
     body: JSON.stringify({ places }),
     headers: {
